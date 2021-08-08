@@ -50,12 +50,11 @@ class GovernmentMelonOrder(AbstractMelonOrder):
     """A US Government order."""
     
     tax = 0
-
     passed_inspection = False
 
     def mark_inspection(passed):
 
-        if passed == True:
+        if passed:
             passed_inspection = True
 
 
