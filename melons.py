@@ -1,5 +1,5 @@
 class AbstractMelonOrder():
-    """Classes for melon orders."""
+    """An abstract base class that other Melon Orders inherit from."""
 
     def __init__(self, species, qty, country_code='USA'):
         """Initialize melon order attributes."""
@@ -36,7 +36,7 @@ class DomesticMelonOrder(AbstractMelonOrder):
 
     tax = 0.08
     order_type = "domestic"
-    
+
 
 
 class InternationalMelonOrder(AbstractMelonOrder):
@@ -44,6 +44,8 @@ class InternationalMelonOrder(AbstractMelonOrder):
 
     order_type = "international"
     tax = 0.17
+    
+
 
 
 class GovernmentMelonOrder(AbstractMelonOrder):
